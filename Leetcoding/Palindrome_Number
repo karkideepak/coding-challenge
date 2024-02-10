@@ -1,4 +1,4 @@
-# Plaindrome number
+# Palindrome number
 """
 Given an integer x, return true if x is a palindrome and false otherwise.
 
@@ -85,5 +85,4 @@ def Solution(object):
             x= x//10
         
         return numReversed == originalX
-    
     
