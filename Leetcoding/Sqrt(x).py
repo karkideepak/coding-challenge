@@ -1,10 +1,16 @@
 class Solution:
-    def mySqrt(self, x:int):
-        """
-        :type x: int
-        :rtype: int
-        """
-        self.x = x
+    def mySqrt(self, x: int):
+        l, r = 0, x
+        res = 0
 
-        if x>10:
-            return sqrt(x)
+        while l <= r:
+            m = l +((r-1)//2)
+            if m**2 > x:
+                r = m-1
+            elif m**2 <x:
+                l =m +1
+                res = m
+            else:
+                return m
+            
+        return res
